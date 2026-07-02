@@ -1,0 +1,38 @@
+{
+  "nyc": {
+    "users": 1082,
+    "pois": 4988,
+    "trajectories": 22035,
+    "checkins": 113344,
+    "self_transition_rate": 0.0184,
+    "revisit_rate": 0.7416,
+    "top5_poi_coverage": 0.6001
+  },
+  "tky": {
+    "users": 2293,
+    "pois": 7728,
+    "trajectories": 61530,
+    "checkins": 371403,
+    "self_transition_rate": 0.0114,
+    "revisit_rate": 0.7022,
+    "top5_poi_coverage": 0.4915
+  },
+  "gowalla_ca": {
+    "users": 6895,
+    "pois": 14651,
+    "trajectories": 57693,
+    "checkins": 324475,
+    "self_transition_rate": 0.011,
+    "revisit_rate": 0.4107,
+    "top5_poi_coverage": 0.5359
+  },
+  "brightkite": {
+    "users": 6459,
+    "pois": 15817,
+    "trajectories": 100034,
+    "checkins": 467526,
+    "self_transition_rate": 0.0989,
+    "revisit_rate": 0.8442,
+    "top5_poi_coverage": 0.8688
+  }
+}

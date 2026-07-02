@@ -1,0 +1,82 @@
+{
+  "nyc": {
+    "newPOI_rate": 0.199,
+    "static": [
+      0.258,
+      0.0125
+    ],
+    "memory": [
+      0.2678,
+      0.0106
+    ],
+    "mem_minus_static": [
+      0.0098,
+      0.0019,
+      0.0005
+    ],
+    "NEWtarget_static": 0.0006,
+    "NEWtarget_memory": 0.0153,
+    "OLDtarget_static": 0.3216,
+    "OLDtarget_memory": 0.3298
+  },
+  "tky": {
+    "newPOI_rate": 0.199,
+    "static": [
+      0.2599,
+      0.0101
+    ],
+    "memory": [
+      0.263,
+      0.0103
+    ],
+    "mem_minus_static": [
+      0.0031,
+      0.0004,
+      0.0001
+    ],
+    "NEWtarget_static": 0.0001,
+    "NEWtarget_memory": 0.0081,
+    "OLDtarget_static": 0.3246,
+    "OLDtarget_memory": 0.3267
+  },
+  "gowalla_ca": {
+    "newPOI_rate": 0.197,
+    "static": [
+      0.0686,
+      0.0059
+    ],
+    "memory": [
+      0.0706,
+      0.0059
+    ],
+    "mem_minus_static": [
+      0.002,
+      0.0001,
+      0.0
+    ],
+    "NEWtarget_static": 0.001,
+    "NEWtarget_memory": 0.0032,
+    "OLDtarget_static": 0.0851,
+    "OLDtarget_memory": 0.087
+  },
+  "brightkite": {
+    "newPOI_rate": 0.201,
+    "static": [
+      0.2566,
+      0.0113
+    ],
+    "memory": [
+      0.2617,
+      0.0111
+    ],
+    "mem_minus_static": [
+      0.0051,
+      0.0004,
+      0.0
+    ],
+    "NEWtarget_static": 0.0007,
+    "NEWtarget_memory": 0.0066,
+    "OLDtarget_static": 0.3207,
+    "OLDtarget_memory": 0.3257
+  }
+}

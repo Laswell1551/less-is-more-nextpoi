@@ -1,0 +1,10 @@
+# Normalize line endings to LF for cross-platform reproducibility
+# (keeps reproduce.sh runnable on Linux/macOS regardless of checkout OS)
+* text=auto eol=lf
+
+# Binary artifacts -- never munge line endings
+*.gz  binary
+*.png binary
+*.pdf binary
+*.npy binary
+*.npz binary

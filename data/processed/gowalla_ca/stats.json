@@ -1,0 +1,58 @@
+{
+  "dataset": "gowalla_ca",
+  "params": {
+    "min_poi": 10,
+    "min_user": 10,
+    "gap_hours": 24,
+    "min_traj": 2
+  },
+  "raw_checkins": 736515,
+  "checkins": 324475,
+  "users": 6895,
+  "pois": 14651,
+  "trajectories": 57693,
+  "avg_traj_len": 5.624,
+  "density_pct": 0.3212,
+  "span_days": 587.9,
+  "self_transition_rate": 0.011,
+  "revisit_rate": 0.4107,
+  "top5_poi_coverage": 0.5359,
+  "by_block": {
+    "T0": {
+      "checkins": 162239,
+      "trajectories": 27906,
+      "users": 4062,
+      "pois": 13428
+    },
+    "T1": {
+      "checkins": 32448,
+      "trajectories": 6131,
+      "users": 2143,
+      "pois": 9342
+    },
+    "T2": {
+      "checkins": 32534,
+      "trajectories": 6016,
+      "users": 2138,
+      "pois": 9509
+    },
+    "T3": {
+      "checkins": 32359,
+      "trajectories": 5847,
+      "users": 2164,
+      "pois": 9539
+    },
+    "T4": {
+      "checkins": 32472,
+      "trajectories": 5727,
+      "users": 2083,
+      "pois": 9479
+    },
+    "T5": {
+      "checkins": 32423,
+      "trajectories": 6066,
+      "users": 2016,
+      "pois": 9115
+    }
+  }
+}

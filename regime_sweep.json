@@ -1,0 +1,146 @@
+{
+  "nyc@0.10": {
+    "dataset": "nyc",
+    "base_frac": 0.1,
+    "new_poi": 0.275,
+    "static": 0.2021,
+    "FT@1e-4": 0.1979,
+    "memory": 0.2134,
+    "FT_minus_static": -0.0042
+  },
+  "nyc@0.20": {
+    "dataset": "nyc",
+    "base_frac": 0.2,
+    "new_poi": 0.187,
+    "static": 0.2643,
+    "FT@1e-4": 0.2595,
+    "memory": 0.2745,
+    "FT_minus_static": -0.0048
+  },
+  "nyc@0.35": {
+    "dataset": "nyc",
+    "base_frac": 0.35,
+    "new_poi": 0.149,
+    "static": 0.3035,
+    "FT@1e-4": 0.2989,
+    "memory": 0.3125,
+    "FT_minus_static": -0.0046
+  },
+  "nyc@0.50": {
+    "dataset": "nyc",
+    "base_frac": 0.5,
+    "new_poi": 0.122,
+    "static": 0.3161,
+    "FT@1e-4": 0.3147,
+    "memory": 0.3239,
+    "FT_minus_static": -0.0014
+  },
+  "tky@0.10": {
+    "dataset": "tky",
+    "base_frac": 0.1,
+    "new_poi": 0.108,
+    "static": 0.2153,
+    "FT@1e-4": 0.2216,
+    "memory": 0.2172,
+    "FT_minus_static": 0.0063
+  },
+  "tky@0.20": {
+    "dataset": "tky",
+    "base_frac": 0.2,
+    "new_poi": 0.064,
+    "static": 0.267,
+    "FT@1e-4": 0.2715,
+    "memory": 0.2691,
+    "FT_minus_static": 0.0045
+  },
+  "tky@0.35": {
+    "dataset": "tky",
+    "base_frac": 0.35,
+    "new_poi": 0.044,
+    "static": 0.3064,
+    "FT@1e-4": 0.3119,
+    "memory": 0.309,
+    "FT_minus_static": 0.0055
+  },
+  "tky@0.50": {
+    "dataset": "tky",
+    "base_frac": 0.5,
+    "new_poi": 0.031,
+    "static": 0.3276,
+    "FT@1e-4": 0.3329,
+    "memory": 0.3298,
+    "FT_minus_static": 0.0053
+  },
+  "gowalla_ca@0.10": {
+    "dataset": "gowalla_ca",
+    "base_frac": 0.1,
+    "new_poi": 0.387,
+    "static": 0.0257,
+    "FT@1e-4": 0.0265,
+    "memory": 0.0266,
+    "FT_minus_static": 0.0008
+  },
+  "gowalla_ca@0.20": {
+    "dataset": "gowalla_ca",
+    "base_frac": 0.2,
+    "new_poi": 0.255,
+    "static": 0.042,
+    "FT@1e-4": 0.0445,
+    "memory": 0.0434,
+    "FT_minus_static": 0.0025
+  },
+  "gowalla_ca@0.35": {
+    "dataset": "gowalla_ca",
+    "base_frac": 0.35,
+    "new_poi": 0.167,
+    "static": 0.0635,
+    "FT@1e-4": 0.0663,
+    "memory": 0.0641,
+    "FT_minus_static": 0.0028
+  },
+  "gowalla_ca@0.50": {
+    "dataset": "gowalla_ca",
+    "base_frac": 0.5,
+    "new_poi": 0.117,
+    "static": 0.0883,
+    "FT@1e-4": 0.0919,
+    "memory": 0.0901,
+    "FT_minus_static": 0.0036
+  },
+  "brightkite@0.10": {
+    "dataset": "brightkite",
+    "base_frac": 0.1,
+    "new_poi": 0.628,
+    "static": 0.1352,
+    "FT@1e-4": 0.159,
+    "memory": 0.1387,
+    "FT_minus_static": 0.0238
+  },
+  "brightkite@0.20": {
+    "dataset": "brightkite",
+    "base_frac": 0.2,
+    "new_poi": 0.562,
+    "static": 0.1753,
+    "FT@1e-4": 0.1894,
+    "memory": 0.1793,
+    "FT_minus_static": 0.0141
+  },
+  "brightkite@0.35": {
+    "dataset": "brightkite",
+    "base_frac": 0.35,
+    "new_poi": 0.403,
+    "static": 0.2573,
+    "FT@1e-4": 0.2637,
+    "memory": 0.2619,
+    "FT_minus_static": 0.0064
+  },
+  "brightkite@0.50": {
+    "dataset": "brightkite",
+    "base_frac": 0.5,
+    "new_poi": 0.354,
+    "static": 0.3194,
+    "FT@1e-4": 0.3254,
+    "memory": 0.3243,
+    "FT_minus_static": 0.006
+  }
+}

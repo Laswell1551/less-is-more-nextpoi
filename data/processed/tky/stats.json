@@ -1,0 +1,58 @@
+{
+  "dataset": "tky",
+  "params": {
+    "min_poi": 10,
+    "min_user": 10,
+    "gap_hours": 24,
+    "min_traj": 2
+  },
+  "raw_checkins": 573703,
+  "checkins": 371403,
+  "users": 2293,
+  "pois": 7728,
+  "trajectories": 61530,
+  "avg_traj_len": 6.036,
+  "density_pct": 2.09592,
+  "span_days": 318.3,
+  "self_transition_rate": 0.0114,
+  "revisit_rate": 0.7022,
+  "top5_poi_coverage": 0.4915,
+  "by_block": {
+    "T0": {
+      "checkins": 185704,
+      "trajectories": 27666,
+      "users": 2099,
+      "pois": 7379
+    },
+    "T1": {
+      "checkins": 37141,
+      "trajectories": 7449,
+      "users": 1833,
+      "pois": 5674
+    },
+    "T2": {
+      "checkins": 37140,
+      "trajectories": 6553,
+      "users": 1754,
+      "pois": 5436
+    },
+    "T3": {
+      "checkins": 37139,
+      "trajectories": 6264,
+      "users": 1742,
+      "pois": 5494
+    },
+    "T4": {
+      "checkins": 37170,
+      "trajectories": 6705,
+      "users": 1735,
+      "pois": 5391
+    },
+    "T5": {
+      "checkins": 37109,
+      "trajectories": 6893,
+      "users": 1663,
+      "pois": 5201
+    }
+  }
+}

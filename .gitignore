@@ -1,0 +1,30 @@
+# Raw data (~1.1 GB) -- redownloadable via download_data.py; processed splits ARE committed
+data/raw/
+
+# Regenerable figures (paper_figures.py -> figs_paper/; observe.py / r2_staleness.py /
+# mechanism_demo.py -> figs/). All figures rebuild from the committed CSV/JSON artifacts.
+figs/
+figs_paper/
+
+# Python / OS / editor cruft
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+*.log
+
+# LaTeX build artifacts (if the paper sources sit alongside)
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Temp / scratch
+*.tmp
+*.tmp.*

@@ -1,0 +1,58 @@
+{
+  "dataset": "brightkite",
+  "params": {
+    "min_poi": 10,
+    "min_user": 10,
+    "gap_hours": 24,
+    "min_traj": 2
+  },
+  "raw_checkins": 2920441,
+  "checkins": 467526,
+  "users": 6459,
+  "pois": 15817,
+  "trajectories": 100034,
+  "avg_traj_len": 4.674,
+  "density_pct": 0.45763,
+  "span_days": 936.8,
+  "self_transition_rate": 0.0989,
+  "revisit_rate": 0.8442,
+  "top5_poi_coverage": 0.8688,
+  "by_block": {
+    "T0": {
+      "checkins": 233788,
+      "trajectories": 50551,
+      "users": 4852,
+      "pois": 11885
+    },
+    "T1": {
+      "checkins": 46762,
+      "trajectories": 10041,
+      "users": 2482,
+      "pois": 7033
+    },
+    "T2": {
+      "checkins": 46718,
+      "trajectories": 9943,
+      "users": 2241,
+      "pois": 6865
+    },
+    "T3": {
+      "checkins": 46762,
+      "trajectories": 9849,
+      "users": 2233,
+      "pois": 6709
+    },
+    "T4": {
+      "checkins": 46743,
+      "trajectories": 10139,
+      "users": 1891,
+      "pois": 6389
+    },
+    "T5": {
+      "checkins": 46753,
+      "trajectories": 9511,
+      "users": 1072,
+      "pois": 4504
+    }
+  }
+}

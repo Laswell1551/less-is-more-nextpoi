@@ -1,0 +1,29 @@
+{
+  "nyc": {
+    "always_acc": 0.6533,
+    "calm_tau": "CALMerr@0.8",
+    "calm_acc": 0.6477,
+    "calm_update_rate": 0.701,
+    "calm_churn": 0.061,
+    "always_churn": 0.065,
+    "churn_reduction": 0.062
+  },
+  "tky": {
+    "always_acc": 0.5688,
+    "calm_tau": "CALMnov@0.6",
+    "calm_acc": 0.5536,
+    "calm_update_rate": 0.654,
+    "calm_churn": 0.053,
+    "always_churn": 0.066,
+    "churn_reduction": 0.193
+  },
+  "gowalla_ca": {
+    "always_acc": 0.2811,
+    "calm_tau": "CALMerr@0.5",
+    "calm_acc": 0.2752,
+    "calm_update_rate": 0.777,
+    "calm_churn": 0.069,
+    "always_churn": 0.08,
+    "churn_reduction": 0.137
+  }
+}

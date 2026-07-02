@@ -1,0 +1,82 @@
+{
+  "nyc": {
+    "static": 0.258,
+    "fixedFT": [
+      0.2586,
+      0.0007,
+      0.1565,
+      0.005
+    ],
+    "controller": [
+      0.2574,
+      -0.0006,
+      0.0307,
+      0.008
+    ],
+    "NEWtarget": {
+      "static": 0.0006,
+      "fixedFT": 0.001,
+      "controller": 0.0009
+    }
+  },
+  "tky": {
+    "static": 0.2599,
+    "fixedFT": [
+      0.2521,
+      -0.0077,
+      0.0016,
+      0.0
+    ],
+    "controller": [
+      0.2518,
+      -0.0081,
+      0.0068,
+      0.003
+    ],
+    "NEWtarget": {
+      "static": 0.0001,
+      "fixedFT": 0.0021,
+      "controller": 0.0031
+    }
+  },
+  "gowalla_ca": {
+    "static": 0.0686,
+    "fixedFT": [
+      0.0685,
+      -0.0001,
+      0.769,
+      -0.004
+    ],
+    "controller": [
+      0.0682,
+      -0.0004,
+      0.3538,
+      0.003
+    ],
+    "NEWtarget": {
+      "static": 0.001,
+      "fixedFT": 0.002,
+      "controller": 0.0018
+    }
+  },
+  "brightkite": {
+    "static": 0.2566,
+    "fixedFT": [
+      0.2543,
+      -0.0023,
+      0.0077,
+      0.014
+    ],
+    "controller": [
+      0.2547,
+      -0.0019,
+      0.0028,
+      0.015
+    ],
+    "NEWtarget": {
+      "static": 0.0007,
+      "fixedFT": 0.0061,
+      "controller": 0.0039
+    }
+  }
+}

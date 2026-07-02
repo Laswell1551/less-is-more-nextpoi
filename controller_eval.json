@@ -1,0 +1,174 @@
+{
+  "nyc": {
+    "static": {
+      "acc": [
+        0.3162,
+        0.0015
+      ],
+      "forget": 0.0,
+      "churn": 0.0,
+      "steps": 0
+    },
+    "naive_1e3": {
+      "acc": [
+        0.2203,
+        0.0021
+      ],
+      "forget": 0.222,
+      "churn": 0.774,
+      "steps": 450
+    },
+    "tuned_3e5": {
+      "acc": [
+        0.3201,
+        0.001
+      ],
+      "forget": -0.005,
+      "churn": 0.114,
+      "steps": 450
+    },
+    "controller": {
+      "acc": [
+        0.3161,
+        0.001
+      ],
+      "forget": 0.003,
+      "churn": 0.122,
+      "steps": 450,
+      "lr_range": [
+        3.125e-05,
+        6.25e-05
+      ],
+      "rollbacks": 4.8
+    }
+  },
+  "tky": {
+    "static": {
+      "acc": [
+        0.3294,
+        0.0017
+      ],
+      "forget": 0.0,
+      "churn": 0.0,
+      "steps": 0
+    },
+    "naive_1e3": {
+      "acc": [
+        0.2467,
+        0.0019
+      ],
+      "forget": 0.197,
+      "churn": 0.705,
+      "steps": 450
+    },
+    "tuned_3e5": {
+      "acc": [
+        0.3344,
+        0.0009
+      ],
+      "forget": -0.009,
+      "churn": 0.082,
+      "steps": 450
+    },
+    "controller": {
+      "acc": [
+        0.3313,
+        0.0004
+      ],
+      "forget": 0.0,
+      "churn": 0.159,
+      "steps": 450,
+      "lr_range": [
+        3.125e-05,
+        0.000125
+      ],
+      "rollbacks": 4.0
+    }
+  },
+  "gowalla_ca": {
+    "static": {
+      "acc": [
+        0.0885,
+        0.0011
+      ],
+      "forget": 0.0,
+      "churn": 0.0,
+      "steps": 0
+    },
+    "naive_1e3": {
+      "acc": [
+        0.0737,
+        0.0015
+      ],
+      "forget": 0.175,
+      "churn": 0.832,
+      "steps": 450
+    },
+    "tuned_3e5": {
+      "acc": [
+        0.0902,
+        0.001
+      ],
+      "forget": -0.006,
+      "churn": 0.114,
+      "steps": 450
+    },
+    "controller": {
+      "acc": [
+        0.0899,
+        0.0009
+      ],
+      "forget": 0.006,
+      "churn": 0.183,
+      "steps": 450,
+      "lr_range": [
+        3.125e-05,
+        6.25e-05
+      ],
+      "rollbacks": 4.6
+    }
+  },
+  "brightkite": {
+    "static": {
+      "acc": [
+        0.32,
+        0.0013
+      ],
+      "forget": 0.0,
+      "churn": 0.0,
+      "steps": 0
+    },
+    "naive_1e3": {
+      "acc": [
+        0.2653,
+        0.001
+      ],
+      "forget": 0.207,
+      "churn": 0.758,
+      "steps": 450
+    },
+    "tuned_3e5": {
+      "acc": [
+        0.3191,
+        0.0012
+      ],
+      "forget": 0.006,
+      "churn": 0.137,
+      "steps": 450
+    },
+    "controller": {
+      "acc": [
+        0.3188,
+        0.0013
+      ],
+      "forget": 0.008,
+      "churn": 0.106,
+      "steps": 450,
+      "lr_range": [
+        1.5625e-05,
+        3.125e-05
+      ],
+      "rollbacks": 5.2
+    }
+  }
+}

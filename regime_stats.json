@@ -1,0 +1,66 @@
+{
+  "nyc": {
+    "test_transitions": 43894,
+    "frac_warm_user": 0.8812,
+    "frac_warm_target_poi": 0.8776,
+    "frac_fully_warm": 0.7959,
+    "frac_cold_user": 0.1188,
+    "drift_js_T0_to_Tk": [
+      0.228,
+      0.273,
+      0.368,
+      0.43,
+      0.453
+    ],
+    "per_user_drift_T0_T5_median": 0.493,
+    "n_users_in_both_blocks": 187
+  },
+  "tky": {
+    "test_transitions": 151835,
+    "frac_warm_user": 0.8724,
+    "frac_warm_target_poi": 0.9685,
+    "frac_fully_warm": 0.8514,
+    "frac_cold_user": 0.1276,
+    "drift_js_T0_to_Tk": [
+      0.112,
+      0.139,
+      0.147,
+      0.158,
+      0.163
+    ],
+    "per_user_drift_T0_T5_median": 0.544,
+    "n_users_in_both_blocks": 736
+  },
+  "gowalla_ca": {
+    "test_transitions": 132449,
+    "frac_warm_user": 0.4497,
+    "frac_warm_target_poi": 0.8833,
+    "frac_fully_warm": 0.4199,
+    "frac_cold_user": 0.5503,
+    "drift_js_T0_to_Tk": [
+      0.249,
+      0.3,
+      0.312,
+      0.329,
+      0.353
+    ],
+    "per_user_drift_T0_T5_median": 0.766,
+    "n_users_in_both_blocks": 238
+  },
+  "brightkite": {
+    "test_transitions": 184255,
+    "frac_warm_user": 0.6449,
+    "frac_warm_target_poi": 0.6464,
+    "frac_fully_warm": 0.5196,
+    "frac_cold_user": 0.3551,
+    "drift_js_T0_to_Tk": [
+      0.384,
+      0.451,
+      0.517,
+      0.595,
+      0.783
+    ],
+    "per_user_drift_T0_T5_median": 0.632,
+    "n_users_in_both_blocks": 216
+  }
+}

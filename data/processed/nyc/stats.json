@@ -1,0 +1,58 @@
+{
+  "dataset": "nyc",
+  "params": {
+    "min_poi": 10,
+    "min_user": 10,
+    "gap_hours": 24,
+    "min_traj": 2
+  },
+  "raw_checkins": 227428,
+  "checkins": 113344,
+  "users": 1082,
+  "pois": 4988,
+  "trajectories": 22035,
+  "avg_traj_len": 5.144,
+  "density_pct": 2.10012,
+  "span_days": 318.4,
+  "self_transition_rate": 0.0184,
+  "revisit_rate": 0.7416,
+  "top5_poi_coverage": 0.6001,
+  "by_block": {
+    "T0": {
+      "checkins": 56711,
+      "trajectories": 9296,
+      "users": 969,
+      "pois": 4561
+    },
+    "T1": {
+      "checkins": 11296,
+      "trajectories": 2360,
+      "users": 813,
+      "pois": 3241
+    },
+    "T2": {
+      "checkins": 11336,
+      "trajectories": 2527,
+      "users": 744,
+      "pois": 3156
+    },
+    "T3": {
+      "checkins": 11332,
+      "trajectories": 2745,
+      "users": 759,
+      "pois": 3106
+    },
+    "T4": {
+      "checkins": 11334,
+      "trajectories": 2563,
+      "users": 680,
+      "pois": 2883
+    },
+    "T5": {
+      "checkins": 11335,
+      "trajectories": 2544,
+      "users": 619,
+      "pois": 2701
+    }
+  }
+}

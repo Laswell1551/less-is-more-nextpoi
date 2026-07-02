@@ -1,0 +1,29 @@
+{
+  "nyc": {
+    "R1_rank@90": null,
+    "R1_energy_top10": 0.2636,
+    "R2_frac_drift_lt_0.10": 0.0709,
+    "R2_top10pct_change_share": 0.2045,
+    "R3_acf_24h": 0.547,
+    "R3_acf_168h": 0.453,
+    "R3_top10pct_poi_share": 0.3607
+  },
+  "tky": {
+    "R1_rank@90": null,
+    "R1_energy_top10": 0.2248,
+    "R2_frac_drift_lt_0.10": 0.0367,
+    "R2_top10pct_change_share": 0.1831,
+    "R3_acf_24h": 0.529,
+    "R3_acf_168h": 0.411,
+    "R3_top10pct_poi_share": 0.613
+  },
+  "gowalla_ca": {
+    "R1_rank@90": null,
+    "R1_energy_top10": 0.2642,
+    "R2_frac_drift_lt_0.10": 0.0059,
+    "R2_top10pct_change_share": 0.1473,
+    "R3_acf_24h": 0.893,
+    "R3_acf_168h": 0.888,
+    "R3_top10pct_poi_share": 0.4083
+  }
+}

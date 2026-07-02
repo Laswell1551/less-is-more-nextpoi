@@ -1,0 +1,26 @@
+{
+  "nyc": {
+    "top1_agreement_static_vs_refit": 0.4763,
+    "update_changes_top1_frac": 0.5237,
+    "top1_acc_static": 0.1479,
+    "top1_acc_refit": 0.1982
+  },
+  "tky": {
+    "top1_agreement_static_vs_refit": 0.4808,
+    "update_changes_top1_frac": 0.5192,
+    "top1_acc_static": 0.1381,
+    "top1_acc_refit": 0.1739
+  },
+  "gowalla_ca": {
+    "top1_agreement_static_vs_refit": 0.3171,
+    "update_changes_top1_frac": 0.6829,
+    "top1_acc_static": 0.035,
+    "top1_acc_refit": 0.0629
+  },
+  "brightkite": {
+    "top1_agreement_static_vs_refit": 0.4238,
+    "update_changes_top1_frac": 0.5762,
+    "top1_acc_static": 0.1892,
+    "top1_acc_refit": 0.3104
+  }
+}

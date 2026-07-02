@@ -1,0 +1,14 @@
+# Install a CUDA build of PyTorch first (see https://pytorch.org/get-started/locally/):
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+#
+# Exact versions used for the reported results (RTX 4080 SUPER, CUDA 12.4):
+#   torch 2.6.0+cu124, pandas 3.0.3, numpy 2.4.6, scikit-learn 1.9.0,
+#   matplotlib 3.11.0, scipy 1.17.1
+torch>=2.2
+numpy>=1.26
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.5
+matplotlib>=3.9
+tqdm>=4.66
+pyarrow            # optional: faster columnar IO; pipeline falls back to csv.gz if absent
