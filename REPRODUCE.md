@@ -11,7 +11,8 @@ table numbers are assembled by `make_tables.py` (which reads the same artifacts)
 | Dataset statistics | `download_data.py`, `preprocess.py` | `data/processed/<ds>/stats.json` |
 | Observation statistics (revisit, cold-user, drift, redundancy) | `observe.py`, `r2_staleness.py`, `revision_analysis.py` | `observations.json`, `observations_R2_staleness.json`, `regime_stats.json` |
 | Main comparison (Acc@10) | `run_submission.py --backbone {gru,attn,getnext}` | `results_seed_<ds>_<bb>.csv` |
-| — Markov row | `markov_baseline.py` | `markov_baseline.json` |
+| — Markov row (Table 4: the **frozen** Markov) | `markov_baseline.py --frozen` | `markov_baseline_frozen.json` |
+| — Markov, continually updated (not in Table 4) | `markov_baseline.py` | `markov_baseline.json` |
 | Significance (paired Δ, p) | `run_submission.py` → `make_tables.py` | `results_seed_*.csv` |
 | Multi-K (Acc@1/5/10/20, MRR) | `run_submission.py` → `make_tables.py` | `results_seed_*.csv` |
 | Robustness grid (8 methods × 3 backbones × 4 datasets) | `run_submission.py` (all backbones) | `results_seed_*_{gru,attn,getnext}.csv` |

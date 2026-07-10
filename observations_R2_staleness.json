@@ -55,5 +55,24 @@
     "mean_lazy_gap": 0.0941,
     "retention_at_T5": 0.331,
     "mean_top1_agreement": 0.6759
+  },
+  "brightkite": {
+    "acc_frozen_T1toT5": [
+      0.6335,
+      0.5193,
+      0.4188,
+      0.3363,
+      0.1418
+    ],
+    "acc_refit_T1toT5": [
+      0.6335,
+      0.6782,
+      0.6625,
+      0.6404,
+      0.4856
+    ],
+    "mean_lazy_gap": 0.2101,
+    "retention_at_T5": 0.2921,
+    "mean_top1_agreement": 0.643
   }
 }

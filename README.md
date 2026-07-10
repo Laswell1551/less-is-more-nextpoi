@@ -1,8 +1,8 @@
-# Less is More: Auditing Continual Learning for Streaming Next-POI Recommendation
+# Less is More: Auditing Continual Learning for Streaming Next Point-of-Interest Recommendation
 
 Code, data splits, and protocols for the paper
 *"Less is More: A Strong Static Baseline and the Limits of Continual Learning for
-Streaming Next-POI Recommendation."*
+Streaming Next Point-of-Interest Recommendation."*
 
 This repository reproduces every table and figure in the paper. It is a compact audit
 harness, not a heavy framework: one file (`learned_continual.py`) holds the backbones,
@@ -21,7 +21,8 @@ scripts are thin drivers that each produce one part of the paper.
 2. "Fine-tuning catastrophically forgets" is a **learning-rate artifact** (continuous in
    the update step, not a binary freeze-vs-fine-tune divide).
 3. Even an auto-tuned, forgetting-safe **controller**, handed *manufactured* new-POI
-   headroom via a clean geographic-injection protocol, captures **none** of it; the small
+   headroom via a clean geographic-injection protocol, captures **essentially none** of it
+   (near-zero accuracy on the new POIs, and it still ties or loses overall); the small
    recoverable signal is captured by **counting** (a per-user memory), not by gradient.
 
 ## Installation
@@ -90,7 +91,7 @@ chronological increments `T1`–`T5` (see `preprocess.py` and the paper, §3).
 | `observe.py`, `r2_staleness.py`, `revision_analysis.py`, `revision_neural_redundancy.py` | Observations 1–3 (redundancy, forgetting, regime/cold-start). |
 | `lr_sweep.py` | The learning-rate sweep (the "artifact" result) → `lr_sweep.json`. |
 | `regime_sweep.py`, `criterion.py` | Base-shrinking probe and the (honestly failed) a-priori criterion → `regime_sweep.json`, `criterion.json`. |
-| `markov_baseline.py` | First-order Markov baseline → `markov_baseline.json`. |
+| `markov_baseline.py` | First-order Markov baseline. `--frozen` (the Table 4 row) → `markov_baseline_frozen.json`; without it, the continually-updated variant → `markov_baseline.json`. |
 | `controller_eval.py` | Forgetting-feedback step-size controller, 5 seeds → `controller_eval.json`. |
 | `inject_rigorous.py`, `inject_rigorous_ft.py` | Clean geographic new-POI injection (5 seeds, paired tests, new/old target split) → `inject_rigorous*.json`. |
 | `efficiency.py` | Measured per-round wall-clock + peak GPU memory → `efficiency.json`. |
@@ -115,7 +116,7 @@ committed so the figures/tables can be regenerated without rerunning the GPU swe
 ```bibtex
 @article{anonymous2026lessismore,
   title  = {Less is More: A Strong Static Baseline and the Limits of Continual
-            Learning for Streaming Next-POI Recommendation},
+            Learning for Streaming Next Point-of-Interest Recommendation},
   author = {Anonymous for review},
   year   = {2026},
   note   = {Under review}

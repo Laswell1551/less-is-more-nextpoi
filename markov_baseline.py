@@ -3,6 +3,15 @@
 recommender backing off to global transitions then popularity, evaluated under the
 SAME streaming predict-then-update protocol (15 rounds) on the deduped data. The
 reference pi of Obs. 1 was never scored in the main table; this puts it there.
+
+Two variants, both scored on the same 15 rounds:
+  --frozen   the model is fit on T0 and never ingests the stream.  THIS is the
+             "Markov (non-neural)" row of Table 4 (.306/.379/.153/.316) and the
+             "Frozen, it scores ..." sentence in Sec. 5.1.  -> markov_baseline_frozen.json
+  (default)  the model ingests each round after scoring it (predict-then-update),
+             i.e. a continually-updated Markov.               -> markov_baseline.json
+
+Usage:  python markov_baseline.py --frozen [datasets...]
 """
 import sys
 import json
@@ -25,7 +34,7 @@ def init(S, ut, gt, pop, npo):
         pop[tg] += 1
 
 
-def eval_ds(ds):
+def eval_ds(ds, frozen=False):
     df = L.load(ds); npo = int(df.poi_idx.max() + 1)
     S0 = L.make_samples(df[df.block == "T0"], npo)
     St = L.make_samples(df[df.block != "T0"], npo)
@@ -46,6 +55,8 @@ def eval_ds(ds):
                 hits[k] += int(rank <= k)
             rr += 1.0 / rank if rank <= 20 else 0.0
             N += 1
+        if frozen:                                      # never ingest the stream
+            continue
         for i in idx:                                   # update
             p = int(seq[i, -1]); uu = int(u[i]); tg = int(t[i])
             if p < npo:
@@ -56,14 +67,17 @@ def eval_ds(ds):
 
 
 def main():
-    DS = sys.argv[1:] or ["nyc", "tky", "gowalla_ca", "brightkite"]
+    args = sys.argv[1:]
+    frozen = "--frozen" in args
+    DS = [a for a in args if not a.startswith("--")] or ["nyc", "tky", "gowalla_ca", "brightkite"]
+    fname = "markov_baseline_frozen.json" if frozen else "markov_baseline.json"
     out = {}
     for ds in DS:
-        out[ds] = eval_ds(ds)
+        out[ds] = eval_ds(ds, frozen=frozen)
         print(ds, out[ds])
-    if Path(L.ROOT / "markov_baseline.json").exists():
-        out = {**json.load(open(L.ROOT / "markov_baseline.json")), **out}
-    json.dump(out, open(L.ROOT / "markov_baseline.json", "w"), indent=2)
+    if Path(L.ROOT / fname).exists():
+        out = {**json.load(open(L.ROOT / fname)), **out}
+    json.dump(out, open(L.ROOT / fname, "w"), indent=2)
 
 
 if __name__ == "__main__":

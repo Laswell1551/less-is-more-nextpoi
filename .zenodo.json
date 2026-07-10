@@ -1,0 +1,19 @@
+{
+  "_comment_double_blind": "REVIEW-STAGE METADATA. Information Processing & Management uses double-anonymized peer review, and the submitted manuscript cites this deposit's DOI. Zenodo reads this file when the GitHub release webhook fires, so the creators below MUST stay anonymous until the paper is accepted. The de-anonymized version (nine named authors, affiliations, corresponding-author email) lives outside this repository in camera_ready_release/.zenodo.json and camera_ready_release/CITATION.cff. On acceptance: replace this file, re-run the release, and edit the Zenodo record's metadata -- the DOI is preserved.",
+  "title": "Less is More: A Strong Static Baseline and the Limits of Continual Learning for Streaming Next Point-of-Interest Recommendation",
+  "description": "Code, chronological data splits, and evaluation protocols reproducing every table and figure in the paper. An audit harness for streaming next-POI recommendation: GRU / self-attention / GETNext-style backbones, a strict predict-then-update streaming protocol, all continual-learning baselines (static, periodic, selective-gated, GIRAM / GIRAM-VAE, EWC, ADER, forgetting-feedback controller), per-user memory, and forgetting / churn metrics. Author names are withheld pending double-anonymized peer review.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    { "name": "Anonymous" }
+  ],
+  "keywords": [
+    "point-of-interest recommendation",
+    "continual learning",
+    "streaming recommendation",
+    "catastrophic forgetting",
+    "strong baselines",
+    "reproducibility"
+  ]
+}

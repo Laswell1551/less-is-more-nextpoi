@@ -28,8 +28,9 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent
 PROC = ROOT / "data" / "processed"
 FIGS = ROOT / "figs"
-DATASETS = ["nyc", "tky", "gowalla_ca"]
-COLORS = {"nyc": "#1f77b4", "tky": "#d62728", "gowalla_ca": "#2ca02c"}
+DATASETS = ["nyc", "tky", "gowalla_ca", "brightkite"]
+COLORS = {"nyc": "#1f77b4", "tky": "#d62728", "gowalla_ca": "#2ca02c",
+          "brightkite": "#9467bd"}
 BLOCKS = [f"T{i}" for i in range(6)]
 K = 10
 
