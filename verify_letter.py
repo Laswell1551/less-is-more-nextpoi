@@ -70,11 +70,23 @@ if cjk:
     fails.append("mojibake: the letter was decoded with the wrong codepage somewhere")
 if repl:
     fails.append("U+FFFD in the letter")
-# an em-dash followed immediately by a digit or '%' is the signature of the eaten byte
-for m in re.finditer(r"—\s?[\d%]", let):
-    fails.append(f"eaten byte after an em-dash: {let[m.start()-30:m.start()+12]!r}")
-    print(f"  [FAIL] em-dash swallowed the character after it: "
-          f"...{let[m.start()-30:m.start()+12]}...")
+
+# The eaten byte leaves two signatures, and only two. Be precise -- an em-dash followed by a
+# number is perfectly normal English ("-- 54% of them --"); what is NOT normal is a NUMERIC RANGE
+# written with an em-dash, because that is what a mangled en-dash decays into:
+#     95.7-99.7%   ->  "95.7<em-dash> 9.7%"    (the leading 9 was eaten with the lost byte)
+#     2024-2026    ->  "2024<en-dash>026"      (the leading 2 was eaten)
+DAMAGE = [
+    (r"[\d%]\s*—\s*\d",            "a numeric range written with an em-dash (was an en-dash)"),
+    (r"\d{4}\s*[–—]\s*\d{1,3}\b",  "a year range whose second year lost a digit"),
+    (r"[\d.]+\s*[–—]\s*\.\d",      "a decimal range whose second value lost its leading digit"),
+]
+for pat, why in DAMAGE:
+    for m in re.finditer(pat, let):
+        seg = let[max(0, m.start() - 34):m.end() + 16].replace("\n", " ")
+        fails.append(f"{why}: {m.group(0)!r}")
+        print(f"  [FAIL] {why}")
+        print(f"         ...{seg}...")
 print()
 
 
@@ -114,6 +126,14 @@ abs_body = re.search(r"(?s)\\begin\{abstract\}(.*?)\\end\{abstract\}", tex).grou
 abs_words = len(re.sub(r"\\[a-zA-Z]+\{?|\}|\$|~|\\\\", "", abs_body).split())
 title = re.search(r"\\title\[mode=title\]\{(.*?)\}", tex).group(1)
 
+# recency of the PRINTED list -- the editor asked for "the last two years", and counts the list
+recent24 = 0
+for m in re.finditer(r"(?s)@\w+\{([^,]+),(.*?)(?=\n@|\Z)", BIB.read_text(encoding="utf-8")):
+    key, body = m.group(1).strip(), m.group(2)
+    y = re.search(r"year\s*=\s*\{?(\d{4})", body)
+    if y and int(y.group(1)) >= 2024 and re.search(r"\{" + re.escape(key) + r"\}", bbl):
+        recent24 += 1
+
 
 def claimed_int(pat):
     m = re.search(pat, let)
@@ -127,8 +147,12 @@ check("figures", claimed_int(r"(\d+) figures"), figures)
 check("numbered equations", claimed_int(r"(\d+) numbered equations"), equations)
 check("definitions", claimed_int(r"(\d+) definitions"), definitions)
 check("printed references", claimed_int(r"\*\*(\d+) works\*\*"), printed_refs)
-check("IP&M references cited", claimed_int(r"\*\*(\d+) of the 62"), ipm)
+check("IP&M references cited", claimed_int(r"\*\*(\d+) of the 74"), ipm)
 check("abstract words", claimed_int(r"250 words \(\*\*(\d+)\*\*\)"), abs_words)
+m24 = re.search(r"\*\*Forty of them[^*]*?(\d+)%", let)
+if m24:
+    check("refs from 2024 onward", 40, recent24)
+    check("...as a % of the list", int(m24.group(1)), round(100 * recent24 / printed_refs))
 
 t_ok = title in let
 print(f"  [{'ok ' if t_ok else 'FAIL'}] title matches the manuscript      "
@@ -136,6 +160,39 @@ print(f"  [{'ok ' if t_ok else 'FAIL'}] title matches the manuscript      "
 if not t_ok:
     fails.append("title")
     print(f"         manuscript: {title}")
+
+# ------------------------------------------------- (1b) works the letter says we CITE
+#
+# This check exists because point 9 of the letter -- the reply to "you must update your literature
+# review" -- claimed we cite "ROTAN 2024, Diff-POI, GeoMamba 2025, GNPR-SID 2025". We did not. All
+# four sat in refs_v2.bib, verified, and never made it into the prose. The manuscript even
+# DESCRIBED rotation-based temporal attention and diffusion without citing the POI papers that do
+# them. The numbers all checked out; the claim was still false, and the editor can falsify it by
+# reading the reference list.
+#
+# So: every work the letter names must actually reach the printed bibliography.
+NAMED = {                       # what the letter calls it  ->  the bib key that must be cited
+    "ROTAN": "feng2024rotan",
+    "Diff-POI": "qin2023diffpoi",
+    "GeoMamba": "qin2025geomamba",
+    "GNPR-SID": "wang2025gnprsid",
+    "LLM4POI": "li2024llm4poi",
+    "MFC4POI": "song2026mfc4poi",
+    "LRSA": "zhu2026lrsa",
+    "STrajRAG": "lin2025strajrag",
+    "GIRAM": "wang2025giram",
+    "GETNext": "yang2022getnext",
+    "STHGCN": "yan2023sthgcn",
+}
+print("\nWorks the letter names by name -- each must reach the printed bibliography:\n")
+for name, key in NAMED.items():
+    if name not in let:
+        continue                                    # the letter does not claim it
+    cited = bool(re.search(r"\{" + re.escape(key) + r"\}", bbl))
+    print(f"  [{'ok ' if cited else 'FAIL'}] {name:10s} -> {key:20s} "
+          f"{'in the bibliography' if cited else 'NAMED IN THE LETTER BUT NOT CITED'}")
+    if not cited:
+        fails.append(f"letter names {name} but the manuscript never cites it")
 
 # --------------------------------------------------------------- (2) numbers
 # Values the letter quotes ON PURPOSE because they are what we got WRONG. Each must be traceable
