@@ -29,8 +29,13 @@ claims were artifacts of that:
 
 | claim in the superseded release | with the stream actually ordered by time |
 |---|---|
-| "no continual method beats a frozen model by more than a few percent" | continual methods beat it by **12–192%** |
-| "naive fine-tuning catastrophically forgets and loses 8–30%" | it **gains** 13–32% |
+| "no continual method beats a frozen model by more than a few percent" | every one of them beats it, by **4.7% to 183%** |
+| "naive fine-tuning catastrophically forgets and loses 8–30%" | it **gains 12% to 59%** |
+
+*(Both ranges are 5-seed means across the four datasets, recomputed by `gen_tables.py` into
+`table_claims.json`. An earlier revision of this README quoted 12–192% and 13–32%; those predate the
+`float64` counter and the unification of the rank estimator, and are themselves an instance of the
+drift this repository now checks for.)*
 
 `ranking.py`, `run_chrono.py` and `experiments/verify_*.py` in this release exist because of that
 episode. The paper now reports the sort key as one of its findings (§6.7), together with two other

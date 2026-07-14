@@ -317,15 +317,28 @@ def stream_table():
 
     grad = ["always+replay", "EWC", "ADER", "periodic-4", "selective-gated"]
     full_backbone = ["always+replay", "EWC", "ADER"]
-    lo_u = hi_u = lo_g = hi_g = None
+    # Compute the range the PROSE actually claims. This field used to be called
+    # "continual_gain_over_frozen_pct" while including COUNT -- which is not a continual-learning
+    # method -- so it reported a maximum of 190.2% that no continual method reaches. The prose said
+    # "every continual method improves ... by between 12% and 192%", which matched neither the
+    # artifact nor anything else; a sentence three subsections later said 4.7-191%. Two numbers for
+    # one quantity, in one paper, is the defect this paper is about. Name the quantity, then compute it.
+    lo_u = hi_u = lo_g = hi_g = lo_c = hi_c = lo_f = hi_f = None
     churn_ratio = []
     for k in DSK:
         st = G[k][G[k].policy == "static"][ACC].mean()
-        for p in POL[1:] + ["COUNT"]:
-            v = cnt.loc[k, ACC] if p == "COUNT" else G[k][G[k].policy == p][ACC].mean()
-            r = (v / st - 1) * 100
+        for p in POL[1:]:                       # the continual-learning methods, and ONLY those
+            r = (G[k][G[k].policy == p][ACC].mean() / st - 1) * 100
             lo_u = r if lo_u is None else min(lo_u, r)
             hi_u = r if hi_u is None else max(hi_u, r)
+        rc = (cnt.loc[k, ACC] / st - 1) * 100   # the counter, reported separately
+        lo_c = rc if lo_c is None else min(lo_c, rc)
+        hi_c = rc if hi_c is None else max(hi_c, rc)
+        # naive fine-tuning: the method the superseded release called catastrophically forgetful.
+        # The prose and the cover letter both quote this range, so it has to be computed, not recalled.
+        rf = (G[k][G[k].policy == "always+replay"][ACC].mean() / st - 1) * 100
+        lo_f = rf if lo_f is None else min(lo_f, rf)
+        hi_f = rf if hi_f is None else max(hi_f, rf)
         bg = max(G[k][G[k].policy == p][ACC].mean() for p in grad)
         r = (cnt.loc[k, ACC] / bg - 1) * 100
         lo_g = r if lo_g is None else min(lo_g, r)
@@ -334,6 +347,8 @@ def stream_table():
             worst = max(G[k][G[k].policy == p]["churn"].mean() for p in full_backbone)
             churn_ratio.append(worst / cnt.loc[k, "churn"])
     return {"continual_gain_over_frozen_pct": [round(lo_u, 1), round(hi_u, 1)],
+            "count_gain_over_frozen_pct": [round(lo_c, 1), round(hi_c, 1)],
+            "naive_ft_gain_over_frozen_pct": [round(lo_f, 1), round(hi_f, 1)],
             "count_over_best_gradient_pct": [round(lo_g, 1), round(hi_g, 1)],
             "count_churn_range": [round(min(cnt["churn"]), 3), round(max(cnt["churn"]), 3)],
             "churn_ratio_vs_full_backbone": [round(min(churn_ratio), 1), round(max(churn_ratio), 1)]
