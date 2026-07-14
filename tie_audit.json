@@ -1,0 +1,52 @@
+{
+  "count-static": {
+    "optimistic": {
+      "acc@1": 0.2274,
+      "acc@5": 0.5059,
+      "acc@10": 0.5978,
+      "acc@20": 0.6715,
+      "mrr": 0.3491
+    },
+    "pessimistic": {
+      "acc@1": 0.2173,
+      "acc@5": 0.5018,
+      "acc@10": 0.5921,
+      "acc@20": 0.6699,
+      "mrr": 0.3414
+    },
+    "expected": {
+      "acc@1": 0.2173,
+      "acc@5": 0.5027,
+      "acc@10": 0.5921,
+      "acc@20": 0.6701,
+      "mrr": 0.3441
+    },
+    "pct_target_tied": 36.7,
+    "median_tie_group": 165
+  },
+  "count-traj": {
+    "optimistic": {
+      "acc@1": 0.2198,
+      "acc@5": 0.5189,
+      "acc@10": 0.6252,
+      "acc@20": 0.7065,
+      "mrr": 0.3524
+    },
+    "pessimistic": {
+      "acc@1": 0.2153,
+      "acc@5": 0.5155,
+      "acc@10": 0.6222,
+      "acc@20": 0.7049,
+      "mrr": 0.3484
+    },
+    "expected": {
+      "acc@1": 0.2153,
+      "acc@5": 0.516,
+      "acc@10": 0.6222,
+      "acc@20": 0.705,
+      "mrr": 0.3499
+    },
+    "pct_target_tied": 31.5,
+    "median_tie_group": 165
+  }
+}

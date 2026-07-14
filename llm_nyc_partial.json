@@ -1,0 +1,12 @@
+{
+  "dataset": "nyc", "model": "Qwen2.5-7B-Instruct", "n_cand": 50, "n_eval": 990,
+  "note": "Preserved from the run that crashed in the continual-FT arm (a -1 label from a retriever miss). zs/static/anchor completed and are exact.",
+  "chance":  {"acc@1": 0.0154, "acc@5": 0.0771, "acc@10": 0.1541, "mrr": 0.0694},
+  "ceiling": {"retriever_recall@50": 0.7707},
+  "results": {
+    "llm-zs":     {"acc@1": 0.0354, "acc@5": 0.1293, "acc@10": 0.2283, "mrr": 0.1026, "signal_captured": 0.120},
+    "llm-static": {"acc@1": 0.0919, "acc@5": 0.2586, "acc@10": 0.4222, "mrr": 0.1902, "signal_captured": 0.435},
+    "llm-anchor": {"acc@1": 0.1727, "acc@5": 0.4414, "acc@10": 0.5879, "mrr": 0.3014, "signal_captured": 0.704, "alpha": 0.5},
+    "COUNT":      {"acc@1": 0.1889, "acc@5": 0.4889, "acc@10": 0.6202, "mrr": 0.3281, "signal_captured": 0.756}
+  }
+}

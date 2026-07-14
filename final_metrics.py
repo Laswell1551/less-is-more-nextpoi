@@ -24,7 +24,9 @@ def metrics(score_fn, S):
     for seq, u, h, d, t in L.batches(S, np.arange(len(S["tgt"])), 1024):
         sc = score_fn(seq, u, h, d)
         tgt = sc.gather(1, t.unsqueeze(1))
-        rank = (sc > tgt).sum(1) + 1
+        # expected rank under random tie-breaking (see ranking.py)
+        eq = (sc == tgt).sum(1)
+        rank = (sc > tgt).sum(1).float() + (eq.float() + 1.0) / 2.0
         for k in KS:
             acc[k] += int((rank <= k).sum())
         rr += float((1.0 / rank).sum()); N += len(rank)

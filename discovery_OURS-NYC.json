@@ -1,0 +1,28 @@
+{
+  "name": "OURS-NYC",
+  "n": 5550,
+  "n_revisit": 4384,
+  "n_discovery": 1166,
+  "results": {
+    "Popularity": {
+      "all": 0.0431,
+      "revisit": 0.0424,
+      "discovery": 0.0455
+    },
+    "GETNext (as-released)": {
+      "all": 0.5541,
+      "revisit": 0.6978,
+      "discovery": 0.0137
+    },
+    "COUNT (same info)": {
+      "all": 0.6222,
+      "revisit": 0.7865,
+      "discovery": 0.0043
+    },
+    "COUNT (stream)": {
+      "all": 0.6778,
+      "revisit": 0.8574,
+      "discovery": 0.0026
+    }
+  }
+}

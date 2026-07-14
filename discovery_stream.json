@@ -1,0 +1,86 @@
+{
+  "nyc": {
+    "n": 43894,
+    "return_share": 0.7554,
+    "acc@10": {
+      "static (neural)": {
+        "all": 0.3161,
+        "return": 0.4165,
+        "discovery": 0.006
+      },
+      "popularity": {
+        "all": 0.0359,
+        "return": 0.0351,
+        "discovery": 0.0383
+      },
+      "COUNT": {
+        "all": 0.6091,
+        "return": 0.8037,
+        "discovery": 0.008
+      }
+    }
+  },
+  "tky": {
+    "n": 151835,
+    "return_share": 0.6954,
+    "acc@10": {
+      "static (neural)": {
+        "all": 0.3276,
+        "return": 0.4447,
+        "discovery": 0.0603
+      },
+      "popularity": {
+        "all": 0.1297,
+        "return": 0.1582,
+        "discovery": 0.0645
+      },
+      "COUNT": {
+        "all": 0.5102,
+        "return": 0.7297,
+        "discovery": 0.009
+      }
+    }
+  },
+  "gowalla_ca": {
+    "n": 132449,
+    "return_share": 0.3516,
+    "acc@10": {
+      "static (neural)": {
+        "all": 0.0883,
+        "return": 0.1717,
+        "discovery": 0.0431
+      },
+      "popularity": {
+        "all": 0.0292,
+        "return": 0.033,
+        "discovery": 0.0272
+      },
+      "COUNT": {
+        "all": 0.2568,
+        "return": 0.6989,
+        "discovery": 0.0172
+      }
+    }
+  },
+  "brightkite": {
+    "n": 184255,
+    "return_share": 0.76,
+    "acc@10": {
+      "static (neural)": {
+        "all": 0.3194,
+        "return": 0.4126,
+        "discovery": 0.0243
+      },
+      "popularity": {
+        "all": 0.0305,
+        "return": 0.0313,
+        "discovery": 0.0277
+      },
+      "COUNT": {
+        "all": 0.6963,
+        "return": 0.9104,
+        "discovery": 0.0183
+      }
+    }
+  }
+}

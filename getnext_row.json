@@ -1,0 +1,17 @@
+{
+  "acc@1": 0.2449,
+  "acc@5": 0.4699,
+  "acc@10": 0.5527,
+  "acc@20": 0.6121,
+  "mrr": 0.3462,
+  "sd": {
+    "acc@1": 0.00029,
+    "acc@5": 0.00099,
+    "acc@10": 0.00157,
+    "acc@20": 0.00083,
+    "mrr": 0.00014
+  },
+  "n_instances": 5550,
+  "n_hashseeds": 3,
+  "estimator": "per-instance mean over the 5,550 Protocol-A instances; MRR over the FULL catalogue via (logits > logits[target]).sum()+1, identical to the counter's; and averaged over PYTHONHASHSEED in {0,1,7}. The last part is necessary, not fussy: at a FIXED hash seed this evaluation is bit-identical run to run (sd 0.00000), but the hash seed determines the batch composition and the released transformer attends across the mini-batch, so a single seed reports one arbitrary draw. See hashseed_experiment.py."
+}

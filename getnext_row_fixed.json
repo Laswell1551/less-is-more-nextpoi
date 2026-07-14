@@ -1,0 +1,10 @@
+{
+  "acc@1": 0.2058,
+  "acc@5": 0.4112,
+  "acc@10": 0.4951,
+  "acc@20": 0.5643,
+  "mrr": 0.301,
+  "n_instances": 5550,
+  "estimator": "per-instance mean; MRR over the full catalogue via (logits > logits[target]).sum()+1 -- identical to the counter's",
+  "note": "single run. Used only to show that correcting the index misalignment degrades the model; the conclusion is far larger than the hash-seed spread."
+}

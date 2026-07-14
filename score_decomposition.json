@@ -1,0 +1,64 @@
+{
+  "nyc": {
+    "return_share": 0.7554,
+    "popularity": 0.7389,
+    "static (neural)": 0.9954,
+    "COUNT": 0.9968,
+    "best_a_ret": 0.8037,
+    "best_a_dis": 0.0383,
+    "best_a_dis_by": "popularity",
+    "BEST_ACHIEVABLE_return_share_of_score": 0.9848,
+    "BEST_ACHIEVABLE_discovery_share_of_score": 0.0152,
+    "COUNT_return_over_discovery_ratio": 100.5
+  },
+  "tky": {
+    "return_share": 0.6954,
+    "popularity": 0.8485,
+    "static (neural)": 0.9439,
+    "COUNT": 0.9946,
+    "best_a_ret": 0.7297,
+    "best_a_dis": 0.0645,
+    "best_a_dis_by": "popularity",
+    "BEST_ACHIEVABLE_return_share_of_score": 0.9627,
+    "BEST_ACHIEVABLE_discovery_share_of_score": 0.0373,
+    "COUNT_return_over_discovery_ratio": 81.1
+  },
+  "gowalla_ca": {
+    "return_share": 0.3516,
+    "popularity": 0.3968,
+    "static (neural)": 0.6836,
+    "COUNT": 0.9566,
+    "best_a_ret": 0.6989,
+    "best_a_dis": 0.0431,
+    "best_a_dis_by": "static (neural)",
+    "BEST_ACHIEVABLE_return_share_of_score": 0.8979,
+    "BEST_ACHIEVABLE_discovery_share_of_score": 0.1021,
+    "COUNT_return_over_discovery_ratio": 40.6
+  },
+  "brightkite": {
+    "return_share": 0.76,
+    "popularity": 0.7816,
+    "static (neural)": 0.9817,
+    "COUNT": 0.9937,
+    "best_a_ret": 0.9104,
+    "best_a_dis": 0.0277,
+    "best_a_dis_by": "popularity",
+    "BEST_ACHIEVABLE_return_share_of_score": 0.9905,
+    "BEST_ACHIEVABLE_discovery_share_of_score": 0.0095,
+    "COUNT_return_over_discovery_ratio": 49.7
+  },
+  "_summary": {
+    "COUNT_return_share_of_score_range": [
+      0.9566,
+      0.9968
+    ],
+    "best_achievable_return_share_range": [
+      0.8979,
+      0.9905
+    ],
+    "COUNT_return_over_discovery_ratio_range": [
+      40.6,
+      100.5
+    ]
+  }
+}

@@ -27,6 +27,8 @@ import time
 from pathlib import Path
 
 import numpy as np
+
+import ranking as RK
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -169,10 +171,12 @@ def stream_rich(score_fn, S, rich):
     Purely additive: does not touch the validated acc@10/warm/cold path."""
     for seq, u, h, d, t in batches(S, np.arange(len(S["tgt"])), 1024):
         sc = score_fn(seq, u, h, d)
-        rank = (sc > sc.gather(1, t.unsqueeze(1))).sum(1) + 1
+        # expected rank under random tie-breaking (see ranking.py); the optimistic
+        # convention inflated the counter, which ties on ~40% of instances.
+        rank = RK.expected_rank_torch(sc, t)
         rich["a1"] += int((rank <= 1).sum().item()); rich["a5"] += int((rank <= 5).sum().item())
         rich["a10"] += int((rank <= 10).sum().item()); rich["a20"] += int((rank <= 20).sum().item())
-        rich["rr"] += float((1.0 / rank.float()).sum().item()); rich["n"] += int(rank.numel())
+        rich["rr"] += float((1.0 / rank).sum().item()); rich["n"] += int(rank.numel())
 
 
 def _rich0():

@@ -1,0 +1,15 @@
+{
+  "dataset": "nyc",
+  "n_eval": 990,
+  "n_cand": 50,
+  "retriever_recall": 0.7707,
+  "chance": {
+    "acc@1": 0.0154,
+    "acc@5": 0.0771,
+    "acc@10": 0.1541,
+    "mrr": 0.0694
+  },
+  "ceiling": {
+    "acc@any": 0.7707
+  }
+}

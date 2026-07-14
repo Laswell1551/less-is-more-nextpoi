@@ -1,0 +1,28 @@
+{
+  "note": "Three evaluations of the IDENTICAL GETNext checkpoint on the IDENTICAL data. The aggregate metric is stable; the per-instance predictions are not reproducible.",
+  "runs": [
+    {
+      "file": "determinism_1.json",
+      "n": 5550,
+      "acc@1": 0.2438,
+      "acc@10": 0.5553
+    },
+    {
+      "file": "determinism_2.json",
+      "n": 5550,
+      "acc@1": 0.2436,
+      "acc@10": 0.5535
+    },
+    {
+      "file": "determinism_3.json",
+      "n": 5550,
+      "acc@1": 0.2429,
+      "acc@10": 0.5542
+    }
+  ],
+  "acc@10_mean": 0.5543,
+  "acc@10_sd": 0.0007,
+  "acc@1_mean": 0.2434,
+  "acc@1_sd": 0.0004,
+  "share_of_instances_whose_top20_differs_between_runs": 1.0
+}

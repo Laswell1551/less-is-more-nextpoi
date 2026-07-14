@@ -1,0 +1,39 @@
+{
+  "dataset": "ours_nyc",
+  "n_instances": 9778,
+  "n_pois": 4393,
+  "dropped_cold_user": 0,
+  "dropped_unseen_poi": 0,
+  "tie_breaking": "expected rank (ranking.py) -- never optimistic",
+  "note": "The counter scored on STHGCN's OWN evaluation instances, which are NOT GETNext's 5,550: STHGCN applies different filters (min_poi_freq 9, min_user_freq 9, 1440-min sessions). Comparing an accuracy measured here with one measured on GETNext's instances would be meaningless.",
+  "results": {
+    "popularity": {
+      "acc@1": 0.0111,
+      "acc@5": 0.0291,
+      "acc@10": 0.0409,
+      "acc@20": 0.0531,
+      "mrr": 0.0222
+    },
+    "count-static": {
+      "acc@1": 0.2256,
+      "acc@5": 0.4787,
+      "acc@10": 0.5662,
+      "acc@20": 0.6175,
+      "mrr": 0.3397
+    },
+    "count-traj": {
+      "acc@1": 0.2221,
+      "acc@5": 0.4878,
+      "acc@10": 0.5803,
+      "acc@20": 0.6368,
+      "mrr": 0.3414
+    },
+    "count-stream": {
+      "acc@1": 0.2516,
+      "acc@5": 0.5419,
+      "acc@10": 0.6382,
+      "acc@20": 0.7064,
+      "mrr": 0.3819
+    }
+  }
+}

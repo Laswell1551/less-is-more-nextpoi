@@ -1,0 +1,10 @@
+{
+  "dataset": "nyc",
+  "model": "Qwen2.5-7B-Instruct",
+  "n_cand": 50,
+  "n_eval": 990,
+  "note": "zero-shot, frozen, no training of any kind. Ran to completion before an OOM in the LoRA stage; preserved here so it need not be recomputed.",
+  "results": {
+    "llm-zs": {"acc@1": 0.0354, "acc@5": 0.1293, "acc@10": 0.2283, "mrr": 0.1026, "sec": 1463.2, "n": 990}
+  }
+}

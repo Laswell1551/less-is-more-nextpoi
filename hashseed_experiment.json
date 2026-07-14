@@ -1,0 +1,58 @@
+{
+  "control_PYTHONHASHSEED_fixed": {
+    "runs": [
+      "fixedseed_1.json",
+      "fixedseed_2.json",
+      "fixedseed_3.json"
+    ],
+    "n": 5550,
+    "batch_order_identical_across_runs": true,
+    "frac_rank_moved_at_all": 0.0,
+    "frac_flipped_hit_miss": {
+      "@1": 0.0,
+      "@5": 0.0,
+      "@10": 0.0,
+      "@20": 0.0
+    },
+    "acc@1_values": [
+      0.245,
+      0.245,
+      0.245
+    ],
+    "acc@10_values": [
+      0.5524,
+      0.5524,
+      0.5524
+    ],
+    "acc@10_sd": 0.0
+  },
+  "treatment_PYTHONHASHSEED_varied": {
+    "runs": [
+      "hashseed_0.json",
+      "hashseed_1.json",
+      "hashseed_7.json"
+    ],
+    "n": 5550,
+    "batch_order_identical_across_runs": false,
+    "frac_rank_moved_at_all": 0.5953,
+    "frac_flipped_hit_miss": {
+      "@1": 0.0286,
+      "@5": 0.0252,
+      "@10": 0.0196,
+      "@20": 0.0115
+    },
+    "acc@1_values": [
+      0.245,
+      0.2445,
+      0.2452
+    ],
+    "acc@10_values": [
+      0.5524,
+      0.551,
+      0.5548
+    ],
+    "acc@10_sd": 0.00156
+  },
+  "excess_flip_at_1": 0.0286,
+  "excess_flip_at_10": 0.0196
+}

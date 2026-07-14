@@ -1,0 +1,36 @@
+{
+  "dataset": "nyc",
+  "n_pois": 4988,
+  "n_users": 1082,
+  "n_test": 43894,
+  "has_category": true,
+  "retriever_recall": {
+    "@10": 0.5213,
+    "@50": 0.7531,
+    "@100": 0.7767
+  },
+  "full_catalogue": {
+    "memory_only": {
+      "acc@1": 0.1743,
+      "acc@5": 0.4746,
+      "acc@10": 0.6091,
+      "mrr": 0.3102
+    },
+    "popularity": {
+      "acc@1": 0.0071,
+      "acc@5": 0.0239,
+      "acc@10": 0.0364,
+      "mrr": 0.0185
+    }
+  },
+  "candidate_restricted": {
+    "n_cand": 50,
+    "n_eval": 990,
+    "memory_only": {
+      "acc@1": 0.1889,
+      "acc@5": 0.4889,
+      "acc@10": 0.6202,
+      "mrr": 0.3281
+    }
+  }
+}

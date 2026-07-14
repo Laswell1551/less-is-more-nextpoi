@@ -1,0 +1,5 @@
+policy,acc@10,acc_cold,acc_warm,update_steps,forget_drop,churn,avg_users_upd,acc@1,acc@5,acc@10m,acc@20,mrr,dataset
+count (non-neural),0.6094,0.5199,0.6215,0,0.0755,0.109,-,0.1743,0.4746,0.6091,0.7069,0.3102,nyc
+count (non-neural),0.5103,0.4873,0.5136,0,0.067,0.1461,-,0.1352,0.3917,0.5102,0.6084,0.2539,tky
+count (non-neural),0.2572,0.2169,0.3065,0,0.0555,0.1666,-,0.0824,0.2059,0.2568,0.3053,0.1415,gowalla_ca
+count (non-neural),0.6966,0.5876,0.7567,0,0.0355,0.1133,-,0.2881,0.6147,0.6963,0.7424,0.4323,brightkite

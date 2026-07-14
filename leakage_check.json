@@ -1,0 +1,46 @@
+[
+  {
+    "dataset": "Foursquare-NYC",
+    "last_T0": "2012-06-15 12:35:53",
+    "first_post_T0": "2012-06-09 14:07:09",
+    "overlap_days": 5.9,
+    "overlap_pct_of_span": 1.86,
+    "post_T0_checkins_before_last_T0": 2899,
+    "post_T0_pct": 5.12,
+    "T0_checkins_after_first_post_T0": 1468,
+    "T0_pct": 2.59
+  },
+  {
+    "dataset": "Foursquare-TKY",
+    "last_T0": "2012-07-19 01:00:54",
+    "first_post_T0": "2012-07-13 05:32:00",
+    "overlap_days": 5.8,
+    "overlap_pct_of_span": 1.83,
+    "post_T0_checkins_before_last_T0": 7394,
+    "post_T0_pct": 3.98,
+    "T0_checkins_after_first_post_T0": 2668,
+    "T0_pct": 1.44
+  },
+  {
+    "dataset": "Gowalla-CA",
+    "last_T0": "2010-05-31 03:53:06",
+    "first_post_T0": "2010-05-19 00:20:10",
+    "overlap_days": 12.1,
+    "overlap_pct_of_span": 2.07,
+    "post_T0_checkins_before_last_T0": 9458,
+    "post_T0_pct": 5.83,
+    "T0_checkins_after_first_post_T0": 1757,
+    "T0_pct": 1.08
+  },
+  {
+    "dataset": "Brightkite-US",
+    "last_T0": "2009-03-15 01:39:04",
+    "first_post_T0": "2009-02-23 16:32:06",
+    "overlap_days": 19.4,
+    "overlap_pct_of_span": 2.07,
+    "post_T0_checkins_before_last_T0": 17361,
+    "post_T0_pct": 7.43,
+    "T0_checkins_after_first_post_T0": 2035,
+    "T0_pct": 0.87
+  }
+]

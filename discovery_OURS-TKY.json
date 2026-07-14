@@ -1,0 +1,23 @@
+{
+  "name": "OURS-TKY",
+  "n": 19372,
+  "n_revisit": 14768,
+  "n_discovery": 4604,
+  "results": {
+    "Popularity": {
+      "all": 0.1297,
+      "revisit": 0.1538,
+      "discovery": 0.0523
+    },
+    "COUNT (same info)": {
+      "all": 0.561,
+      "revisit": 0.7351,
+      "discovery": 0.0024
+    },
+    "COUNT (stream)": {
+      "all": 0.6011,
+      "revisit": 0.7883,
+      "discovery": 0.0007
+    }
+  }
+}

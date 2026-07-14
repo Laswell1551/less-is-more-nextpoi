@@ -1,0 +1,36 @@
+{
+  "dataset": "tky",
+  "n_pois": 7728,
+  "n_users": 2293,
+  "n_test": 151835,
+  "has_category": true,
+  "retriever_recall": {
+    "@10": 0.4568,
+    "@50": 0.6803,
+    "@100": 0.7372
+  },
+  "full_catalogue": {
+    "memory_only": {
+      "acc@1": 0.1336,
+      "acc@5": 0.39,
+      "acc@10": 0.5093,
+      "mrr": 0.2534
+    },
+    "popularity": {
+      "acc@1": 0.03,
+      "acc@5": 0.0977,
+      "acc@10": 0.1297,
+      "mrr": 0.0654
+    }
+  },
+  "candidate_restricted": {
+    "n_cand": 50,
+    "n_eval": 990,
+    "memory_only": {
+      "acc@1": 0.1545,
+      "acc@5": 0.404,
+      "acc@10": 0.5182,
+      "mrr": 0.2731
+    }
+  }
+}

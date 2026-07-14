@@ -1,0 +1,53 @@
+{
+  "name": "OURS-TKY",
+  "n_instances": 19372,
+  "dropped_cold_user_trajs": 3507,
+  "dropped_short_trajs": 10985,
+  "n_pois": 7379,
+  "results": {
+    "count-static": {
+      "acc@1": 0.1676,
+      "acc@5": 0.4182,
+      "acc@10": 0.519,
+      "acc@20": 0.6014,
+      "mrr@20": 0.2787,
+      "mrr_full": 0.2823,
+      "pct_target_tied": 30.6,
+      "OPTIMISTIC_acc@10_not_used": 0.5197,
+      "OPTIMISTIC_acc@1_not_used": 0.1682
+    },
+    "count-traj": {
+      "acc@1": 0.1649,
+      "acc@5": 0.4259,
+      "acc@10": 0.5334,
+      "acc@20": 0.6229,
+      "mrr@20": 0.2812,
+      "mrr_full": 0.2849,
+      "pct_target_tied": 28.1,
+      "OPTIMISTIC_acc@10_not_used": 0.5342,
+      "OPTIMISTIC_acc@1_not_used": 0.1654
+    },
+    "count-stream": {
+      "acc@1": 0.1856,
+      "acc@5": 0.4651,
+      "acc@10": 0.579,
+      "acc@20": 0.6712,
+      "mrr@20": 0.3103,
+      "mrr_full": 0.314,
+      "pct_target_tied": 21.3,
+      "OPTIMISTIC_acc@10_not_used": 0.5793,
+      "OPTIMISTIC_acc@1_not_used": 0.1861
+    },
+    "popularity": {
+      "acc@1": 0.0257,
+      "acc@5": 0.0969,
+      "acc@10": 0.1297,
+      "acc@20": 0.1604,
+      "mrr@20": 0.0571,
+      "mrr_full": 0.0614,
+      "pct_target_tied": 68.3,
+      "OPTIMISTIC_acc@10_not_used": 0.1297,
+      "OPTIMISTIC_acc@1_not_used": 0.0257
+    }
+  }
+}

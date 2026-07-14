@@ -1,0 +1,22 @@
+{
+  "note": "Same instances, same counter, same estimator. ONLY the storage dtype of the counter's M and pop changes. float32 was what the paper reported for a long time; float64 is what Eq. (countscore) actually says.",
+  "getnext_asreleased_acc@10": 0.5527,
+  "float32": {
+    "acc@10_expected": 0.6211,
+    "acc@10_optimistic": 0.6505,
+    "pct_tied": 49.1,
+    "median_tie_group": 14,
+    "n": 5550,
+    "optimistic_inflates_pct": 4.7,
+    "vs_getnext_pct": 12.4
+  },
+  "float64": {
+    "acc@10_expected": 0.6222,
+    "acc@10_optimistic": 0.6252,
+    "pct_tied": 31.5,
+    "median_tie_group": 165,
+    "n": 5550,
+    "optimistic_inflates_pct": 0.5,
+    "vs_getnext_pct": 12.6
+  }
+}

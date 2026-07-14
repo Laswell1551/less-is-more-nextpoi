@@ -1,0 +1,21 @@
+{
+  "note": "Strictly-clean split (evaluation blocks assigned by TARGET timestamp, so no evaluation target precedes any training target). Acc@10 = per-instance mean with expected-rank ties (acc@10m), the same estimator as every other table. Counter memory in float64. WRITTEN BY THIS SCRIPT -- do not hand-edit.",
+  "datasets": {
+    "nyc": {
+      "static": 0.3286,
+      "always+replay": 0.4128,
+      "GIRAM": 0.5826,
+      "COUNT": 0.5984,
+      "n_train": 66428,
+      "n_eval": 24881
+    },
+    "tky": {
+      "static": 0.3436,
+      "always+replay": 0.3812,
+      "GIRAM": 0.5133,
+      "COUNT": 0.5207,
+      "n_train": 185664,
+      "n_eval": 124209
+    }
+  }
+}

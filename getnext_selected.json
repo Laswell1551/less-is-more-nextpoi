@@ -1,0 +1,36 @@
+{
+  "as-released": {
+    "acc@1": 0.2459,
+    "acc@5": 0.4682,
+    "acc@10": 0.5531,
+    "acc@20": 0.6126,
+    "mrr": 0.3465,
+    "epoch": 24,
+    "n_epochs": 50,
+    "criterion": 1.5962
+  },
+  "as-released (per-metric max, NOT used)": {
+    "acc@1": 0.2459,
+    "acc@5": 0.4709,
+    "acc@10": 0.5538,
+    "acc@20": 0.6126,
+    "mrr": 0.3472
+  },
+  "index-corrected": {
+    "acc@1": 0.2052,
+    "acc@5": 0.4142,
+    "acc@10": 0.4946,
+    "acc@20": 0.5642,
+    "mrr": 0.3008,
+    "epoch": 37,
+    "n_epochs": 50,
+    "criterion": 1.385
+  },
+  "index-corrected (per-metric max, NOT used)": {
+    "acc@1": 0.2052,
+    "acc@5": 0.4153,
+    "acc@10": 0.4978,
+    "acc@20": 0.5656,
+    "mrr": 0.3008
+  }
+}
