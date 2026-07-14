@@ -11,8 +11,10 @@ Beat."*
 
 ## ⚠️ This release supersedes the previous one, and the previous one was wrong
 
-An earlier version of this repository (and its Zenodo archive, DOI
-[10.5281/zenodo.21305263](https://doi.org/10.5281/zenodo.21305263)) accompanied a paper titled
+**This release:** [`doi:10.5281/zenodo.21356440`](https://doi.org/10.5281/zenodo.21356440) (v1.1).
+**Superseded and withdrawn:** [`doi:10.5281/zenodo.21305263`](https://doi.org/10.5281/zenodo.21305263) (v1.0).
+
+An earlier version of this repository, archived under the second DOI, accompanied a paper titled
 *"A Strong Static Baseline and the Limits of Continual Learning."* **Its central conclusions do not
 survive, and we withdraw them.** We say so here, at the top, because the archived version is
 citable and someone may find it first.
@@ -187,13 +189,15 @@ ordering — the defect), `lr_sweep.py`, `regime_sweep.py`, `criterion.py`, `con
 ## Citation
 
 ```bibtex
-@article{anonymous2026lessismore,
-  title  = {Less Is More: Next Point-of-Interest Benchmarks Reward Returning,
-            and a Counter Is Hard to Beat},
-  author = {Anonymous for review},
-  year   = {2026},
-  note   = {Under review. Supersedes the release archived at doi:10.5281/zenodo.21305263,
-            whose conclusions we withdraw.}
+@software{anonymous2026lessismore,
+  title   = {Less Is More: Next Point-of-Interest Benchmarks Reward Returning,
+             and a Counter Is Hard to Beat},
+  author  = {Anonymous for review},
+  year    = {2026},
+  version = {1.1},
+  doi     = {10.5281/zenodo.21356440},
+  note    = {Under review. Supersedes doi:10.5281/zenodo.21305263, whose conclusions
+             we withdraw -- see the notice at the top of this README.}
 }
 ```
 
